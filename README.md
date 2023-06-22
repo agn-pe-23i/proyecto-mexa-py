@@ -127,13 +127,14 @@ En el diagrama de estructura presentado hace referencia a dos módulos: "catálo
 
 Módulo "catálogo":
 
-Eliminar producto: Esta función requiere un dato de entrada de tipo string (probablemente el nombre o identificador del producto a eliminar) y devuelve un dato de salida de tipo string (posiblemente un mensaje de confirmación).
-Agregar producto: Esta función necesita un dato de entrada de tipo string (posiblemente los detalles del producto a agregar) y devuelve un dato de salida de tipo string (por ejemplo, un mensaje de confirmación o el identificador asignado al producto).
-Buscar producto: Esta función toma un dato de entrada de tipo string (probablemente un criterio de búsqueda, como el nombre del producto) y devuelve un dato de salida de tipo string (posiblemente los detalles del producto encontrado).
-Mostrar catálogo: Esta función requiere un dato de entrada de tipo entero (posiblemente alguna opción o parámetro) y devuelve un dato de salida de tipo string (probablemente el catálogo completo en forma de texto).
+Eliminar producto: Esta función requiere un dato de entrada de tipo string (el nombre o identificador del producto a eliminar) y devuelve un dato de salida de tipo string (un mensaje de confirmación).
+Agregar producto: Esta función necesita un dato de entrada de tipo string (los detalles del producto a agregar) y devuelve un dato de salida de tipo string (por ejemplo, un mensaje de confirmación o el identificador asignado al producto).
+Buscar producto: Esta función toma un dato de entrada de tipo string (un criterio de búsqueda, como el nombre del producto) y devuelve un dato de salida de tipo string (posiblemente los detalles del producto encontrado).
+Mostrar catálogo: Esta función requiere un dato de entrada de tipo entero (alguna opción o parámetro) y devuelve un dato de salida de tipo string (el catálogo completo en forma de texto).
+
 Módulo "archivo":
 
 Guardar catálogo: Esta función necesita un dato de entrada de tipo string (probablemente el nombre o ubicación del archivo) y devuelve un dato de salida de tipo string (por ejemplo, un mensaje de confirmación o el estado del guardado).
-Cargar catálogo: Esta función requiere un dato de entrada de tipo string (posiblemente el nombre o ubicación del archivo a cargar) y devuelve un dato de salida de tipo string (por ejemplo, un mensaje de confirmación o el estado de la carga).
+Cargar catálogo: Esta función requiere un dato de entrada de tipo string (el nombre del archivo a cargar) y devuelve un dato de salida de tipo string (por ejemplo, un mensaje de confirmación o el estado de la carga).
 En resumen, el módulo "catálogo" se encarga de operaciones relacionadas con la manipulación y visualización de productos en el catálogo, como agregar, eliminar, buscar y mostrar productos. Por otro lado, el módulo "archivo" se ocupa de las operaciones de guardar y cargar el catálogo en un archivo.
 
