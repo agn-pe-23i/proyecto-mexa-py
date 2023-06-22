@@ -21,25 +21,26 @@ El diseño propuesto se basa en la creación de un programa principal que intera
 Además, se hará uso de los diferentes tipos de datos disponibles para almacenar y organizar la información relevante de cada producto en el catálogo. Se implementarán funciones y módulos para facilitar la modularidad y reutilización de código, asegurando así un desarrollo eficiente y escalable.
 
 
-Comentarios sobre la implementación
+Comentarios sobre la implementación: 
 
-Para el módulo de catálogo de productos, se requirió realizar los siguientes pasos. Primero, se creó una lista vacía para almacenar los productos. Luego, se implementó un menú para agregar productos, que mejoró las opciones de agregar películas, series, documentales, eventos deportivos en vivo y regresar al menú anterior. Se implementó una estructura condicional "if" para determinar qué función llamar dependiendo de la opción seleccionada por el usuario. Por ejemplo, si se elige la opción uno, se llama a la función "agregar_pelicula", y así sucesivamente.
+   - Para el modulo main: 
+este código implementa un menú interactivo que permite al usuario realizar diferentes acciones en relación con un catálogo de productos. Las acciones incluyen agregar, buscar, eliminar, mostrar, cargar y guardar productos en el catálogo. El programa se ejecuta hasta que el usuario selecciona la opción de salida
+e importan los módulos "catalogo" y "archivo". Esto implica que el programa hará uso de las funciones y variables definidas en dichos módulos.
 
-En la función de agregar películas (y en las funciones correspondientes a otros tipos de productos), se solicitó al usuario ingresar el título, actor principal, director, año, costo de renta y costo de venta del producto. Estos valores se agregaron a la lista del catálogo, que fue creada anteriormente como una lista vacía.
+A continuación, se define la función menu_principal(). Esta función muestra un menú principal en la consola con varias opciones, como agregar un producto, buscar un producto, eliminar un producto, mostrar el catálogo, cargar catálogo, guardar catálogo y salir. Luego, solicite al usuario que seleccione una opción y devuelva la opción seleccionada.
 
-Para la función de eliminar producto, se solicitó al usuario ingresar el título del producto que deseaba eliminar. Se sacó un bucle "for" para iterar sobre los productos en el catálogo y, si el título coincidía, se eliminó el producto de la lista.
+La función ejecutar_opcion(opcion)se encarga de ejecutar la acción correspondiente según la opción seleccionada por el usuario. Utilice una serie de declaraciones if-elif-elsepara determinar qué acción tomar en función de la opción seleccionada. Por ejemplo, si la opción es "1", se llama a la función catalogo.menu_agregar()del módulo "catalogo".
 
-En cuanto al módulo de mostrar productos, se implementó un bucle "while true" para mostrar el catálogo repetidamente hasta que se ingrese una opción válida para regresar al menú anterior. Utilizando estructuras condicionales "if", se llamaron a las funciones correspondientes para mostrar películas, series, documentales, etc. Se obtuvo un bucle "for" para iterar sobre los productos en cada categoría y mostrar sus títulos. Si no se encontraron productos en una categoría específica, se mostró un mensaje indicando que el catálogo estaba vacío.
+La función main()es el punto de entrada principal del programa. En un bucle infinito while True, obtiene la opción seleccionada del menú principal utilizando la función menu_principal(). Luego, verifica si la opción es "7" (Salir). Si es así, se rompe el bucle y el programa finaliza. Si no es la opción de salida, se llama a la función ejecutar_opcion(opcion)para ejecutar la acción correspondiente.
 
-Se realizó una actualización en la estructura del código para abordar las siguientes cuestiones. En primer lugar similar, se resolvió el problema relacionado con las películas y las series, ya que comparten características, como el "actor principal". En el módulo correspondiente, se implementó una condición para verificar si el tipo de producto es una película o una serie. En caso afirmativo, se imprimió el "actor principal" utilizando la sintaxis "producto.actor_principal". Si no se encontró ningún valor para el "actor principal" en el objeto producto, se mostró el mensaje "No hay actor principal".
+La línea if __name__ == "__main__":verifica si el programa se está ejecutando directamente (no se importa como un módulo en otro programa). Si es así, se llama a la función main()para comenzar la ejecución del programa.8
 
-De manera similar, se aplicó el enfoque mencionado anteriormente para el atributo "director". dependiendo del tipo de producto (película, serie o documental), se imprimió el "director" correspondiente utilizando la sintaxis "producto.director". En caso de que no se encuentre ningún valor para el "director", se mostró el mensaje "No hay director".
 
-En relación a la búsqueda de productos, se solicitó al usuario ingresar una palabra clave y se creó una lista vacía llamada "resultados". A continuación, se implementó un bucle "for" para iterar sobre todos los productos en el catálogo. Se convirtió la palabra clave y el título de cada producto a minúsculas para facilitar la comparación. Si se encontró una coincidencia, se agregó el producto a la lista de resultados.
+  -Para el modulo catalogo: 
 
-Posteriormente, se produjo una estructura condicional "si" para determinar si se encontraron resultados. En caso afirmativo, se imprimió el número de resultados encontrados. Luego, se inició otro bucle "for" para imprimir los detalles de cada producto en la lista de resultados.
 
-En resumen, se llevaron a cabo las siguientes acciones: ajuste en la impresión del "actor principal" y el "director" según el tipo de producto, solicitud de una palabra clave para la búsqueda de productos, iteración sobre el catálogo y agregado de productos que coinciden con una lista de resultados, y finalmente, impresión de los detalles de cada producto encontrado.
+
+
 Documentación: 
 
 El código se organiza en cuatro módulos principales, y el punto de partida es el archivo "catalogo.py", ya que es desde allí que se inicia todo el proceso. Para comenzar, se presenta un menú que permite agregar productos, ya sean películas, series, documentales, eventos deportivos o regresar al menú anterior. Luego, se presentan las opciones numéricas correspondientes a cada tipo de producto, como 1 para películas, 2 para series, y así sucesivamente hasta el 4.
