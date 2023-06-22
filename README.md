@@ -30,11 +30,11 @@ e importan los módulos "catalogo" y "archivo". Esto implica que el programa har
 
 A continuación, se define la función menu_principal(). Esta función muestra un menú principal en la consola con varias opciones, como agregar un producto, buscar un producto, eliminar un producto, mostrar el catálogo, cargar catálogo, guardar catálogo y salir. Luego, solicite al usuario que seleccione una opción y devuelva la opción seleccionada.
 
-La función ejecutar_opcion(opcion) se encarga de ejecutar la acción correspondiente según la opción seleccionada por el usuario. Utilice una serie de declaraciones if-elif-elsepara determinar qué acción tomar en función de la opción seleccionada. Por ejemplo, si la opción es "1", se llama a la función catalogo.menu_agregar()del módulo "catalogo".
+La función ejecutar_opcion(opcion) se encarga de ejecutar la acción correspondiente según la opción seleccionada por el usuario. Utilice una serie de declaraciones if-elif-elsepara determinar qué acción tomar en función de la opción seleccionada. Por ejemplo, si la opción es "1", se llama a la función catalogo.menu_agregar() del módulo "catalogo".
 
-La función main()es el punto de entrada principal del programa. En un bucle infinito while True, obtiene la opción seleccionada del menú principal utilizando la función menu_principal(). Luego, verifica si la opción es "7" (Salir). Si es así, se rompe el bucle y el programa finaliza. Si no es la opción de salida, se llama a la función ejecutar_opcion(opcion)para ejecutar la acción correspondiente.
+La función main()es el punto de entrada principal del programa. En un bucle infinito while True, obtiene la opción seleccionada del menú principal utilizando la función menu_principal(). Luego, verifica si la opción es "7" (Salir). Si es así, se rompe el bucle y el programa finaliza. Si no es la opción de salida, se llama a la función ejecutar_opcion(opcion) para ejecutar la acción correspondiente.
 
-La línea if __name__ == "__main__": verifica si el programa se está ejecutando directamente (no se importa como un módulo en otro programa). Si es así, se llama a la función main()para comenzar la ejecución del programa.8
+La línea if __name__ == "__main__": verifica si el programa se está ejecutando directamente (no se importa como un módulo en otro programa). Si es así, se llama a la función main() para comenzar la ejecución del programa.
 
 
    - Para el modulo catalogo: 
@@ -60,7 +60,7 @@ buscar_producto(): Esta función solicita al usuario que ingrese una palabra cla
 
 import catalogo: Esta línea importa un módulo o archivo llamado "catalogo" en el cual se encuentren definidas funciones relacionadas con el catálogo de productos.
 
-def cargar_catalogo():: Aquí se define una función llamada "cargar_catalogo()" que se encargará de cargar el catálogo desde un archivo de texto.
+def cargar_catalogo(): Aquí se define una función llamada "cargar_catalogo()" que se encargará de cargar el catálogo desde un archivo de texto.
 
 nombre_archivo = input("Ingrese el nombre del archivo: "): Esta línea solicita al usuario que ingrese el nombre del archivo de texto que contiene el catálogo. El valor ingresado se guarda en la variable "nombre_archivo".
 
