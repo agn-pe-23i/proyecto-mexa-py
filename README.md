@@ -23,7 +23,24 @@ Además, se hará uso de los diferentes tipos de datos disponibles para almacena
 
 Comentarios sobre la implementación: 
 
-   - Para el modulo main:
+El código se organiza en cuatro módulos principales, y el punto de partida es el archivo "catalogo.py", ya que es desde allí que se inicia todo el proceso. Para comenzar, se presenta un menú que permite agregar productos, ya sean películas, series, documentales, eventos deportivos o regresar al menú anterior. Luego, se presentan las opciones numéricas correspondientes a cada tipo de producto, como 1 para películas, 2 para series, y así sucesivamente hasta el 4.
+
+A continuación, se abordan los módulos de eliminación y agregado de productos. Se procede primero con la eliminación, donde se llama a la función "eliminar_producto". Dentro de esta función, se utiliza un ciclo "for" para iterar sobre cada producto en el catálogo. Si el título del producto coincide con el valor buscado, se retira del catálogo; de lo contrario, no se realiza ninguna acción. Posteriormente, se pasa al menú de agregado, donde nuevamente se imprimen los números correspondientes a las opciones disponibles para que el usuario elija. dependiendo de la elección del usuario, se llama una función específica. Por ejemplo, si se utiliza el número uno, se llama a la función "agregar_pelicula". A continuación, se solicitan todos los datos necesarios, como título, actor principal, director, año, costo de renta y venta, y se guarda la información en una lista creada en el archivo "catalogo.py". Este proceso se repite para cada tipo de producto.
+
+Posteriormente, se aborda el módulo de "mostrar" y "búsqueda". Se importa el catálogo y se crea una nueva función llamada "mostrar_catalogo", que inicia un bucle infinito hasta que se ingresa una opción correcta. Al igual que en los anteriores, dependiendo de la opción elegida por el usuario, el programa realiza acciones específicas. Por ejemplo, si la opción es 3, se mostrarán los documentales llamando a la función correspondiente. Dentro de esta función, se utiliza un ciclo "for" para iterar sobre los documentales en el catálogo y, en caso de que haya documentales disponibles, se imprimen todos los títulos correspondientes. Si no hay documentos en el catálogo, se imprimirá un mensaje indicando esta situación. Para mostrar todos los productos en el catálogo, simplemente se imprime toda la lista.
+
+Además, se ha creado una función llamada "print_producto" donde se imprimen los valores correspondientes al tipo y título del producto. Además, verifique los detalles adicionales de las especificaciones de cada tipo de producto. Por ejemplo, si el tipo es "Película" o "Serie", se imprime el actor principal; si el tipo es "Película", "Serie" o "Documental", se imprime el director; si el tipo es "Serie", se imprime el número de temporadas; si el tipo es "Documental", se imprime el tema. Si el tipo de producto es "Evento deportivo en vivo", se imprimen detalles como el deporte, fecha, hora y lugar del evento. Por último, se imprimen el costo de renta y el costo de venta del producto. Si alguno de estos valores no está presente en el diccionario del producto,
+
+Finalmente, se encuentra el archivo "main.py", donde se importan todos los módulos.
+
+  
+
+
+
+Documentación: 
+
+
+    - Para el modulo main:
 
 este código implementa un menú interactivo que permite al usuario realizar diferentes acciones en relación con un catálogo de productos. Las acciones incluyen agregar, buscar, eliminar, mostrar, cargar y guardar productos en el catálogo. El programa se ejecuta hasta que el usuario selecciona la opción de salida
 e importan los módulos "catalogo" y "archivo". Esto implica que el programa hará uso de las funciones y variables definidas en dichos módulos.
@@ -37,7 +54,7 @@ La función main()es el punto de entrada principal del programa. En un bucle inf
 La línea if __name__ == "__main__": verifica si el programa se está ejecutando directamente (no se importa como un módulo en otro programa). Si es así, se llama a la función main() para comenzar la ejecución del programa.
 
 
-   - Para el modulo catalogo: 
+    - Para el modulo catalogo: 
 
 Este modulo implementa varias funciones relacionadas con la manipulación de un catálogo de productos. 
 agregar_producto(): Esta función muestra un menú de opciones para agregar un producto al catálogo. dependiendo de la opción seleccionada por el usuario, se llama a la función correspondiente para agregar una película, serie, documental o evento deportivo.
@@ -93,19 +110,6 @@ print("Se ha guardado correctamente."): Se imprime un mensaje indicando que el c
 except:: Si ocurre alguna excepción durante el proceso de guardado, se ejecutará este bloque de código. Se imprime un mensaje indicando que ha ocurrido un error genérico
 
 
-
-
-Documentación: 
-
-El código se organiza en cuatro módulos principales, y el punto de partida es el archivo "catalogo.py", ya que es desde allí que se inicia todo el proceso. Para comenzar, se presenta un menú que permite agregar productos, ya sean películas, series, documentales, eventos deportivos o regresar al menú anterior. Luego, se presentan las opciones numéricas correspondientes a cada tipo de producto, como 1 para películas, 2 para series, y así sucesivamente hasta el 4.
-
-A continuación, se abordan los módulos de eliminación y agregado de productos. Se procede primero con la eliminación, donde se llama a la función "eliminar_producto". Dentro de esta función, se utiliza un ciclo "for" para iterar sobre cada producto en el catálogo. Si el título del producto coincide con el valor buscado, se retira del catálogo; de lo contrario, no se realiza ninguna acción. Posteriormente, se pasa al menú de agregado, donde nuevamente se imprimen los números correspondientes a las opciones disponibles para que el usuario elija. dependiendo de la elección del usuario, se llama una función específica. Por ejemplo, si se utiliza el número uno, se llama a la función "agregar_pelicula". A continuación, se solicitan todos los datos necesarios, como título, actor principal, director, año, costo de renta y venta, y se guarda la información en una lista creada en el archivo "catalogo.py". Este proceso se repite para cada tipo de producto.
-
-Posteriormente, se aborda el módulo de "mostrar" y "búsqueda". Se importa el catálogo y se crea una nueva función llamada "mostrar_catalogo", que inicia un bucle infinito hasta que se ingresa una opción correcta. Al igual que en los anteriores, dependiendo de la opción elegida por el usuario, el programa realiza acciones específicas. Por ejemplo, si la opción es 3, se mostrarán los documentales llamando a la función correspondiente. Dentro de esta función, se utiliza un ciclo "for" para iterar sobre los documentales en el catálogo y, en caso de que haya documentales disponibles, se imprimen todos los títulos correspondientes. Si no hay documentos en el catálogo, se imprimirá un mensaje indicando esta situación. Para mostrar todos los productos en el catálogo, simplemente se imprime toda la lista.
-
-Además, se ha creado una función llamada "print_producto" donde se imprimen los valores correspondientes al tipo y título del producto. Además, verifique los detalles adicionales de las especificaciones de cada tipo de producto. Por ejemplo, si el tipo es "Película" o "Serie", se imprime el actor principal; si el tipo es "Película", "Serie" o "Documental", se imprime el director; si el tipo es "Serie", se imprime el número de temporadas; si el tipo es "Documental", se imprime el tema. Si el tipo de producto es "Evento deportivo en vivo", se imprimen detalles como el deporte, fecha, hora y lugar del evento. Por último, se imprimen el costo de renta y el costo de venta del producto. Si alguno de estos valores no está presente en el diccionario del producto,
-
-Finalmente, se encuentra el archivo "main.py", donde se importan todos los módulos.
 
 
 Para poder hacer uso de los modulos y del programa se deben seguir los siguientes pasos: 
