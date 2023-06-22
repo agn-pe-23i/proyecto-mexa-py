@@ -37,7 +37,7 @@ La función main()es el punto de entrada principal del programa. En un bucle inf
 La línea if __name__ == "__main__": verifica si el programa se está ejecutando directamente (no se importa como un módulo en otro programa). Si es así, se llama a la función main()para comenzar la ejecución del programa.8
 
 
-   -Para el modulo catalogo: 
+   - Para el modulo catalogo: 
 
 Este modulo implementa varias funciones relacionadas con la manipulación de un catálogo de productos. 
 agregar_producto(): Esta función muestra un menú de opciones para agregar un producto al catálogo. dependiendo de la opción seleccionada por el usuario, se llama a la función correspondiente para agregar una película, serie, documental o evento deportivo.
@@ -56,10 +56,39 @@ print_producto(): Esta función auxiliar recibe un diccionario que representa un
 
 buscar_producto(): Esta función solicita al usuario que ingrese una palabra clave y busque en el catálogo todos los productos cuyo título contenga dicha palabra clave (ignorando mayúsculas y minúsculas). Luego muestra los productos encontrados.
 
-    -Para el modulo archivo: 
+    - Para el modulo archivo: 
 
+import catalogo: Esta línea importa un módulo o archivo llamado "catalogo" en el cual se encuentren definidas funciones relacionadas con el catálogo de productos.
 
+def cargar_catalogo():: Aquí se define una función llamada "cargar_catalogo()" que se encargará de cargar el catálogo desde un archivo de texto.
 
+nombre_archivo = input("Ingrese el nombre del archivo: "): Esta línea solicita al usuario que ingrese el nombre del archivo de texto que contiene el catálogo. El valor ingresado se guarda en la variable "nombre_archivo".
+
+try: Se inicia un bloque de código donde se manejarán las excepciones que pueden ocurrir durante la ejecución.
+
+with open(nombre_archivo, "r") as archivo: Se utiliza la declaración "with open" para abrir el archivo especificado en modo de lectura ("r"). El archivo se asocia a la variable "archivo" dentro del bloque de código.
+
+catalogo.catalogo_productos = eval(archivo.read()): Aquí se lee el contenido del archivo utilizando el método "read()" y se utiliza la función "eval()" para evaluar la cadena de texto leído como si fuera un código de Python. Se espera que el contenido del archivo represente un diccionario o estructura de datos que se autorizará a la variable "catalogo_productos" del módulo "catalogo".
+
+print("El catálogo se ha cargado."): Se imprime un mensaje indicando que el catálogo ha sido cargado correctamente.
+
+except FileNotFoundError:: Si ocurre un error del tipo "FileNotFoundError", significa que el archivo especificado no existe y se ejecutará este bloque de código. Se imprime un mensaje indicando que el catálogo no existe.
+
+except:: Este bloque de código se ejecutará si ocurre cualquier otro tipo de excepción no capturado anteriormente. Se imprime un mensaje indicando que ha ocurrido un error genérico.
+
+def guardar_catalogo():: Se define otra función llamada "guardar_catalogo()" que se encargará de guardar el catálogo en un archivo de texto.
+
+nombre_archivo = input("Ingrese el nombre del archivo: "): Similar a la línea 3, se solicita al usuario que ingrese el nombre del archivo en el que se guardará el catálogo.
+
+try:: Se inicia otro bloque "try" para manejar las excepciones.
+
+with open(nombre_archivo, "w") as archivo:: Se utiliza "with open" para abrir el archivo en modo de escritura ("w"). El archivo se asocia a la variable "archivo" dentro del bloque.
+
+archivo.write(str(catalogo.catalogo_productos)): Se escribe en el archivo el contenido de la variable "catalogo_productos" convertido a una cadena de texto utilizando la función "str()".
+
+print("Se ha guardado correctamente."): Se imprime un mensaje indicando que el catálogo se ha guardado correctamente.
+
+except:: Si ocurre alguna excepción durante el proceso de guardado, se ejecutará este bloque de código. Se imprime un mensaje indicando que ha ocurrido un error genérico
 
 
 
@@ -77,4 +106,34 @@ Además, se ha creado una función llamada "print_producto" donde se imprimen lo
 Finalmente, se encuentra el archivo "main.py", donde se importan todos los módulos.
 
 
-NOTA: EL CORRESPONDIENTE DIAGRAMA DE BLOQUE SE ENCUENTRA EN EL ARCHIVO CO N EL NOMBRE "diagrama"
+Para poder hacer uso de los modulos y del programa se deben seguir los siguientes pasos: 
+
+El primer paso a seguir es abrir el repositorio en GitHub para poder visualizar los módulos y toda la información necesaria de su uso. Una vez abierto GitHub, se deben descargar los 3 módulos correspondientes, los cuales son "catalogo.py", "archivo.py" y "main.py". Además, se debe descargar el archivo de texto donde se encuentra cargado ya un catálogo predeterminado, el cual lleva por nombre "Push1.txt". El orden de las descargas no tiene ninguna importancia, sin embargo, todos los archivos descargados deben contenerse en una carpeta nueva y vacía, es decir, que solo contenga los archivos de este programa.
+
+Una vez tengamos la carpeta lista, podemos seleccionarla y dar un clic derecho para poder elegir la opción "ABRIR CON". En este caso, el programa se ejecutará en PyCharm o, en su defecto, en la terminal.
+
+Y asi estara listo el codigo para poder usar. Se posiciona en el código del módulo main y solo ejecutamos.
+
+NOTA: En caso de que el archivo de texto donde se encuentra almacenado el catálogo predeterminado tenga un nombre diferente, solo se debe hacer un ajuste al nombre del mismo archivo, es decir, renombrar dicho archivo, y así podrá cargar exitosamente el archivo .txt del catálogo.
+
+
+
+Diagrama de estructura: 
+
+![WhatsApp Image 2023-06-21 at 21 07 33](https://github.com/agn-pe-23i/proyecto-mexa-py/assets/125591740/3eff9c61-9e1b-433d-be1b-40446b635f87)
+
+
+En el diagrama de estructura presentado hace referencia a dos módulos: "catálogo" y "archivo", los cuales son desplegados desde el módulo principal llamado "main". A continuación, se detallan las funciones y operaciones que cada uno de estos módulos realiza:
+
+Módulo "catálogo":
+
+Eliminar producto: Esta función requiere un dato de entrada de tipo string (probablemente el nombre o identificador del producto a eliminar) y devuelve un dato de salida de tipo string (posiblemente un mensaje de confirmación).
+Agregar producto: Esta función necesita un dato de entrada de tipo string (posiblemente los detalles del producto a agregar) y devuelve un dato de salida de tipo string (por ejemplo, un mensaje de confirmación o el identificador asignado al producto).
+Buscar producto: Esta función toma un dato de entrada de tipo string (probablemente un criterio de búsqueda, como el nombre del producto) y devuelve un dato de salida de tipo string (posiblemente los detalles del producto encontrado).
+Mostrar catálogo: Esta función requiere un dato de entrada de tipo entero (posiblemente alguna opción o parámetro) y devuelve un dato de salida de tipo string (probablemente el catálogo completo en forma de texto).
+Módulo "archivo":
+
+Guardar catálogo: Esta función necesita un dato de entrada de tipo string (probablemente el nombre o ubicación del archivo) y devuelve un dato de salida de tipo string (por ejemplo, un mensaje de confirmación o el estado del guardado).
+Cargar catálogo: Esta función requiere un dato de entrada de tipo string (posiblemente el nombre o ubicación del archivo a cargar) y devuelve un dato de salida de tipo string (por ejemplo, un mensaje de confirmación o el estado de la carga).
+En resumen, el módulo "catálogo" se encarga de operaciones relacionadas con la manipulación y visualización de productos en el catálogo, como agregar, eliminar, buscar y mostrar productos. Por otro lado, el módulo "archivo" se ocupa de las operaciones de guardar y cargar el catálogo en un archivo.
+
