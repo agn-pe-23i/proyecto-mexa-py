@@ -1,7 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/LCXMIOgt)
 # Proyecto
 ***************************
- profesor: Abel Garcia Nájera 
+ profesor: Abel García Nájera 
 
 Integrantes del equipo y sus matriculas: 
    - Diego Dominic Reyes Pastrana 2223068828
@@ -13,15 +13,14 @@ PROYECTO FINAL de Programación Estructurada
 ***************************
 
 Introducción:
-El presente informe tiene como propósito abordar la necesidad de actualizar el sistema de alquiler y venta de películas, series, documentales y eventos deportivos en vivo de un servicio de streaming. En un contexto donde la demanda de contenido audiovisual se ha incrementado considerablemente, resulta esencial que estas plataformas se mantengan actualizadas y ofrezcan una experiencia de usuario fluida y completa.
+*************
+El presente trabajo tiene como objetivo desarrollar un diseño top-down para el desarrollo de un programa que cumpla con los requisitos de un servicio de streaming en particular. Para lograr esto, se utilizarán diferentes conceptos y temas estudiados en la Unidad de Enseñanza-Aprendizaje (UEA) correspondiente, tales como estructuras de control, tipos de datos, secuencias de datos, funciones, módulos, registros y archivos.
 
-El sistema actual requiere mejoras para poder gestionar de manera eficiente el catálogo de productos disponibles, lo cual es fundamental para asegurar una correcta interacción con los usuarios. Por esta razón, es necesario desarrollar un algoritmo en Python que permita la manipulación adecuada y completo del catálogo de productos, a través de una serie de menús que faciliten la navegación y búsqueda de contenido.
+El diseño propuesto se basa en la creación de un programa principal que interactúa con un catálogo de productos, el cual contiene una amplia variedad de películas, series, documentales y eventos deportivos en vivo. Para manipular correctamente este catálogo y asegurar una experiencia de usuario fluida, se implementarán diversas estructuras de control que permitirán la navegación y selección de productos de manera intuitiva a través de una serie de menús.
 
-El objetivo principal de esta actualización es proporcionar a los usuarios una plataforma actualizada y de fácil manejo, donde podrán acceder a una amplia variedad de películas, series, documentales y eventos deportivos en vivo. El nuevo sistema debería permitir a los usuarios navegar por el catálogo, ver información detallada de cada producto, alquilar o comprar y disfrutar de una experiencia completa.
+Además, se hará uso de los diferentes tipos de datos disponibles para almacenar y organizar la información relevante de cada producto en el catálogo. Se implementarán funciones y módulos para facilitar la modularidad y reutilización de código, asegurando así un desarrollo eficiente y escalable.
 
-Este informe examina los requisitos clave y el proceso para crear un nuevo modelo de alquiler y venta. Se ha implementado un algoritmo en Python que resuelve de manera efectiva las tareas establecidas, lo que permite administrar el inventario de manera eficiente. Además, se explorarán diferentes métodos y mejores prácticas para aumentar la capacidad de respuesta y la usabilidad de la plataforma.
-
-documentacion
+Documentación: 
 
 El código se organiza en cuatro módulos principales, y el punto de partida es el archivo "catalogo.py", ya que es desde allí que se inicia todo el proceso. Para comenzar, se presenta un menú que permite agregar productos, ya sean películas, series, documentales, eventos deportivos o regresar al menú anterior. Luego, se presentan las opciones numéricas correspondientes a cada tipo de producto, como 1 para películas, 2 para series, y así sucesivamente hasta el 4.
 
