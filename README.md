@@ -56,7 +56,9 @@ print_producto(): Esta función auxiliar recibe un diccionario que representa un
 
 buscar_producto(): Esta función solicita al usuario que ingrese una palabra clave y busque en el catálogo todos los productos cuyo título contenga dicha palabra clave (ignorando mayúsculas y minúsculas). Luego muestra los productos encontrados.
 
-     - Par ale modulo Archivo: 
+
+
+    - Para el modulo Archivo: 
 
 import catalogo: Esta línea importa un módulo o archivo llamado "catalogo" en el cual se encuentren definidas funciones relacionadas con el catálogo de productos.
 
