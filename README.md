@@ -23,7 +23,8 @@ Además, se hará uso de los diferentes tipos de datos disponibles para almacena
 
 Comentarios sobre la implementación: 
 
-   - Para el modulo main: 
+   - Para el modulo main:
+
 este código implementa un menú interactivo que permite al usuario realizar diferentes acciones en relación con un catálogo de productos. Las acciones incluyen agregar, buscar, eliminar, mostrar, cargar y guardar productos en el catálogo. El programa se ejecuta hasta que el usuario selecciona la opción de salida
 e importan los módulos "catalogo" y "archivo". Esto implica que el programa hará uso de las funciones y variables definidas en dichos módulos.
 
@@ -37,6 +38,25 @@ La línea if __name__ == "__main__":verifica si el programa se está ejecutando 
 
 
   -Para el modulo catalogo: 
+
+Este modulo implementa varias funciones relacionadas con la manipulación de un catálogo de productos. 
+agregar_producto(): Esta función muestra un menú de opciones para agregar un producto al catálogo. dependiendo de la opción seleccionada por el usuario, se llama a la función correspondiente para agregar una película, serie, documental o evento deportivo.
+
+menu_agregar(): Esta función es similar a agregar_producto(), pero se utiliza específicamente cuando se llama desde la opción "Agregar un producto" en el menú principal. Muestra el mismo menú de opciones y realiza la misma lógica de redireccionamiento a las funciones correspondientes según la opción seleccionada.
+
+mostrar_catalogo(): Esta función muestra un menú de opciones para mostrar diferentes categorías de productos del catálogo. además de la opción seleccionada, se llama a las funciones correspondientes para mostrar películas, series, documentales, eventos deportivos o el catálogo completo.
+
+eliminar_producto(): Esta función solicita al usuario que ingrese el título de un producto y busca en el catálogo si existe un producto con ese título. Si se encuentra, se elimina del catálogo. Si no se encuentra, se muestra un mensaje que indica que no se encontró el producto.
+
+Las funciones agregar_pelicula(), agregar_serie(), agregar_documental()y agregar_evento_deportivo(): Estas funciones se llaman desde las funciones agregar_producto()o menu_agregar()según la opción seleccionada por el usuario. Solicitan al usuario información específica sobre cada tipo de producto y luego agregan el producto al catálogo con los datos proporcionados.
+
+Las funciones mostrar_peliculas(), mostrar_series(), mostrar_documentales(), mostrar_eventos_deportivos()y mostrar_todo(): Estas funciones se llaman desde la función mostrar_catalogo()según la opción seleccionada por el usuario. Cada función registra el catálogo y muestra los productos correspondientes a la categoría seleccionada.
+
+print_producto(): Esta función auxiliar recibe un diccionario que representa un producto y muestra su información formateada en la consola.
+
+buscar_producto(): Esta función solicita al usuario que ingrese una palabra clave y busque en el catálogo todos los productos cuyo título contenga dicha palabra clave (ignorando mayúsculas y minúsculas). Luego muestra los productos encontrados.
+
+  
 
 
 
