@@ -12,7 +12,7 @@ PROYECTO FINAL de Programación Estructurada
 
 ***************************
 
-Introducción:
+INTRODUCCIÓN:
 
 El presente trabajo tiene como objetivo desarrollar un diseño top-down para el desarrollo de un programa que cumpla con los requisitos de un servicio de streaming en particular. Para lograr esto, se utilizarán diferentes conceptos y temas estudiados en la Unidad de Enseñanza-Aprendizaje (UEA) correspondiente, tales como estructuras de control, tipos de datos, secuencias de datos, funciones, módulos, registros y archivos.
 
@@ -21,7 +21,7 @@ El diseño propuesto se basa en la creación de un programa principal que intera
 Además, se hará uso de los diferentes tipos de datos disponibles para almacenar y organizar la información relevante de cada producto en el catálogo. Se implementarán funciones y módulos para facilitar la modularidad y reutilización de código, asegurando así un desarrollo eficiente y escalable.
 
 
-Comentarios sobre la implementación: 
+COMENTARIOS DE IMPLEMENTACIÓN: 
 
 El código se organiza en cuatro módulos principales, y el punto de partida es el archivo "catalogo.py", ya que es desde allí que se inicia todo el proceso. Para comenzar, se presenta un menú que permite agregar productos, ya sean películas, series, documentales, eventos deportivos o regresar al menú anterior. Luego, se presentan las opciones numéricas correspondientes a cada tipo de producto, como 1 para películas, 2 para series, y así sucesivamente hasta el 4.
 
@@ -36,8 +36,7 @@ Finalmente, se encuentra el archivo "main.py", donde se importan todos los módu
   
 
 
-
-Documentación: 
+DOCUMENTACIÓN:
 
 
     - Para el modulo main:
@@ -124,7 +123,7 @@ NOTA: En caso de que el archivo de texto donde se encuentra almacenado el catál
 
 
 
-Diagrama de estructura: 
+DIAGRAMA DE ESTRUCTURA: 
 
 ![WhatsApp Image 2023-06-21 at 21 07 33](https://github.com/agn-pe-23i/proyecto-mexa-py/assets/125591740/3eff9c61-9e1b-433d-be1b-40446b635f87)
 
